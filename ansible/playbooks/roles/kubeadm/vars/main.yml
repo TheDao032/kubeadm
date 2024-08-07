@@ -1,0 +1,8 @@
+---
+# vars file for kubeadm
+kubernetes_version: "v1.30"
+kubernetes_packages:
+  - kubelet
+  - kubeadm
+  - kubectl
+pod_cidr: "10.20.0.0/16"

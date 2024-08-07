@@ -1,0 +1,20 @@
+all:
+  hosts:
+    controlplane:
+      ansible_host: 192.168.56.11
+    node01:
+      ansible_host: 192.168.56.21
+    node02:
+      ansible_host: 192.168.56.22
+  children:
+    master:
+    worker:
+
+master:
+  hosts:
+    controlplane:
+
+worker:
+  hosts:
+    node01:
+    node02:

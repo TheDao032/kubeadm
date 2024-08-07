@@ -1,0 +1,11 @@
+---
+# vars file for common
+common_packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+  - gnupg2
+  - ansible
+  - python3-pip
+  - gpg

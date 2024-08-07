@@ -1,0 +1,27 @@
+---
+- name: k8s-setup
+  hosts: all
+  become: true
+  tasks:
+    - name: Ping all nodes
+      ansible.builtin.ping:
+  roles:
+    - common
+    - docker
+    - kubeadm
+
+- name: k8s-master-setup
+  hosts: master
+  become: true
+  tasks:
+    - name: Ping master node
+      ansible.builtin.ping:
+  # roles:
+
+- name: k8s-worker-setup
+  hosts: worker
+  become: true
+  tasks:
+    - name: Ping worker node
+      ansible.builtin.ping:
+  # roles:
